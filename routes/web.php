@@ -33,3 +33,6 @@ Route::post('/categorys/update/{id}', [CategorysController::class, 'update']);
 // Phone Controller
 Route::get('phones/shopping', [PhonesController::class, 'shopping'])->name('phones.shopping');
 Route::resource('phones', PhonesController::class);
+
+// Customer Controller
+Route::resource('customers', CustomersController::class);

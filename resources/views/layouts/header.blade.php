@@ -20,7 +20,7 @@
                         <a class="nav-link" href="/phones">Phones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/orders">Orders</a>
+                        <a class="nav-link" href="/customers">Customers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about">About Us</a>

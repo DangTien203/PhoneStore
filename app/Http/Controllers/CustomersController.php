@@ -8,5 +8,8 @@ use App\Models\Customer;
 
 class CustomersController extends Controller
 {
-    //
+    public function index() {
+        $customers = Customer::all();
+        return view('customers.index', ['customers' => $customers]);
+    }
 }
