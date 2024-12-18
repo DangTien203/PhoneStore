@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategorysController;
+use App\Http\Controllers\CustomersController;
+use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\PhonesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +18,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
+
+// Category Controller
+Route::get('categorys', [CategorysController::class,'index']);
+Route::get('categorys/create', [CategorysController::class,'create']);
+Route::post('categorys', [CategorysController::class,'store']);
+Route::get('/categorys/{id}', [CategorysController::class, 'show']);
+Route::post('/categorys/delete/{id}', [CategorysController::class, 'destroy']);
+Route::get('/categorys/edit/{id}', [CategorysController::class, 'edit']);
+Route::post('/categorys/update/{id}', [CategorysController::class, 'update']);
