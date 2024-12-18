@@ -11,16 +11,19 @@
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/phones/shopping">Shopping</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/categorys">Categorys</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Phones</a>
+                        <a class="nav-link" href="/phones">Phones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Orders</a>
+                        <a class="nav-link" href="/orders">Orders</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="/about">About Us</a>
                     </li>
                 </ul>
             </div>

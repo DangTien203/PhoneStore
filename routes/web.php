@@ -29,3 +29,7 @@ Route::get('/categorys/{id}', [CategorysController::class, 'show']);
 Route::post('/categorys/delete/{id}', [CategorysController::class, 'destroy']);
 Route::get('/categorys/edit/{id}', [CategorysController::class, 'edit']);
 Route::post('/categorys/update/{id}', [CategorysController::class, 'update']);
+
+// Phone Controller
+Route::get('phones/shopping', [PhonesController::class, 'shopping'])->name('phones.shopping');
+Route::resource('phones', PhonesController::class);

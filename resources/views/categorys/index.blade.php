@@ -1,21 +1,4 @@
 @extends('layouts.app')
-{{-- <style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-    }
-    table, th, td {
-        border: 1px solid black;
-    }
-    th, td {
-        padding: 10px;
-        text-align: center;
-    }
-    th {
-        background-color: #f4f4f4;
-    }
-</style> --}}
 
 @section('content')
     <a href="/categorys/create" class="btn btn-primary" >Create Category</a>
