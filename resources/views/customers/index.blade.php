@@ -1,35 +1,38 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="/customers/create" class="btn btn-primary" >Create new Customer</a>
-    <h1>Customer List</h1>
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Phone Number</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($customers as $customer)
+    <div class="container">
+        <h1>customers List</h1>
+        <a href="{{ route('customers.create') }}" class="btn btn-success mb-3">Create Customer</a>
+
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>{{ $customer->id }}</td>
-                    <td>{{ $customer->name }}</td>
-                    <td>{{ $customer->description }}</td>
-                    <td>{{ $customer->nation }}</td>
-                    <td>
-                        <a class="btn btn-primary" href="{{ url('/customers/' . $customer->id) }}">Detail</a>
-                        <a class="btn btn-primary" href="{{ url('/customers/edit/' . $customer->id) }}">Edit</a>
-                        <form action="/customers/delete/, {{ $customer->id }}" method="POST" style="display: inline;">
-                            @csrf
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this customer?')">Delete</button>
-                        </form>
-                    </td>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Actions</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach ($customers as $customer)
+                    <tr>
+                        <td>{{ $customer->id }}</td>
+                        <td>{{ $customer->name }}</td>
+                        <td>{{ $customer->address }}</td>
+                        <td>{{ $customer->phone_number }}</td>
+                        <td>
+                            <a href="{{ route('customers.show', $customer->id) }}" class="btn btn-info">Detail</a>
+                            <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-primary">Edit</a>
+                            <form action="{{ route('customers.destroy', $customer->id) }}" method="POST" style="display:inline-block;">
+                                @csrf @method('DELETE')
+                                <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this category?')">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 @endsection
