@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>customers List</h1>
+        <h1>Customers List</h1>
         <a href="{{ route('customers.create') }}" class="btn btn-success mb-3">Create Customer</a>
 
         <table class="table table-striped">
@@ -23,7 +23,6 @@
                         <td>{{ $customer->address }}</td>
                         <td>{{ $customer->phone_number }}</td>
                         <td>
-                            <a href="{{ route('customers.show', $customer->id) }}" class="btn btn-info">Detail</a>
                             <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-primary">Edit</a>
                             <form action="{{ route('customers.destroy', $customer->id) }}" method="POST" style="display:inline-block;">
                                 @csrf @method('DELETE')

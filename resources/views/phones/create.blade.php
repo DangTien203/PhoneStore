@@ -32,6 +32,10 @@
                 <input type="number" name="quantity" id="quantity" class="form-control" required min="1">
             </div>
 
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="decimal" name="price" id="price" class="form-control" required min="1">
+            </div>
             <button type="submit" class="btn btn-success mt-3">Create</button>
         </form>
     </div>

@@ -36,3 +36,6 @@ Route::resource('phones', PhonesController::class);
 
 // Customer Controller
 Route::resource('customers', CustomersController::class);
+
+//Order Controller
+Route::resource('orders', OrdersController::class);

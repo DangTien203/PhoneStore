@@ -16,6 +16,7 @@
                         <p class="card-text">
                             <small class="text-muted">Created at: {{ $phone->created_at->format('d M, Y') }}</small>
                         </p>
+                        <h3 class="card-title">${{ $phone->price }}</h3>
                         <a href="/phones" class="btn btn-primary">Back to List</a>
                     </div>
                 </div>

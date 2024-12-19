@@ -11,7 +11,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Category</th>
-                    <th>Quantity</th>
+                    <th>Price</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -21,7 +21,7 @@
                         <td>{{ $phone->id }}</td>
                         <td>{{ $phone->name }}</td>
                         <td>{{ $phone->category->name }}</td>
-                        <td>{{ $phone->quantity }}</td>
+                        <td>${{ $phone->price }}</td>
                         <td>
                             <a href="{{ route('phones.show', $phone->id) }}" class="btn btn-info">Detail</a>
                             <a href="{{ route('phones.edit', $phone->id) }}" class="btn btn-primary">Edit</a>

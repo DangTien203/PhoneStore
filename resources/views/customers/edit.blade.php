@@ -11,7 +11,7 @@
         </div>
         <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="text" name="phone" class="form-control" value="{{ $customer->phone }}" required>
+            <input type="text" name="phone_number" class="form-control" value="{{ $customer->phone_number }}" required>
         </div>
         <div class="form-group">
             <label for="address">Address</label>

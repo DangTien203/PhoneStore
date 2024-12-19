@@ -29,6 +29,7 @@ class PhonesController extends Controller
             'image_path' => 'required|url',
             'category_id' => 'required|exists:categories,id',
             'quantity' => 'required|integer|min:1',
+            'price' => 'required|integer|min:1',
         ]);
 
         Phone::create($request->all());
@@ -49,6 +50,7 @@ class PhonesController extends Controller
             'image_path' => 'required|url',
             'category_id' => 'required|exists:categories,id',
             'quantity' => 'required|integer|min:1',
+            'price' => 'required|integer|min:1',
         ]);
 
         $phone = Phone::findOrFail($id);

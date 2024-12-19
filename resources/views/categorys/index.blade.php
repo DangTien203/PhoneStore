@@ -21,7 +21,6 @@
                     <td>{{ $category->description }}</td>
                     <td>{{ $category->nation }}</td>
                     <td>
-                        <a class="btn btn-info" href="{{ url('/categorys/' . $category->id) }}">Detail</a>
                         <a class="btn btn-primary" href="{{ url('/categorys/edit/' . $category->id) }}">Edit</a>
                         <form action="/categorys/delete/, {{ $category->id }}" method="POST" style="display: inline;">
                             @csrf

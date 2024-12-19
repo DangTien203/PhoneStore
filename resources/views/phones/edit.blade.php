@@ -32,9 +32,13 @@
 
             <div class="form-group">
                 <label for="quantity">Quantity</label>
-                <input type="number" name="quantity" id="quantity" class="form-control" value="{{ $phone->quantity }}" required>
+                <input type="number" name="quantity" id="quantity" class="form-control" value="{{ $phone->quantity }}" required min="1">
             </div>
 
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" class="form-control" value="{{ $phone->price }}" required min="1">
+            </div>
             <button type="submit" class="btn btn-primary mt-3">Update</button>
         </form>
     </div>

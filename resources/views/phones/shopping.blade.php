@@ -13,6 +13,7 @@
                             <h5 class="card-title">{{ $phone->name }}</h5>
                             <p class="card-text"><strong>Category:</strong> {{ $phone->category->name }}</p>
                             <p class="card-text"><strong>Quantity:</strong> {{ $phone->quantity }}</p>
+                            <h6 class="card-title">${{ $phone->price }}</h6>
                             <a href="{{ route('phones.show', $phone->id) }}" class="btn btn-primary">View Details</a>
                         </div>
                     </div>

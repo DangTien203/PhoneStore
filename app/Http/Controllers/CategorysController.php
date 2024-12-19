@@ -26,12 +26,6 @@ class CategorysController extends Controller
 
         return redirect('/categorys');
     }
-
-    public function show($id)
-    {
-        $category = Category::findOrFail($id);
-        return view('categorys.show', compact('category'));
-    }
     
     public function destroy($id)
     {

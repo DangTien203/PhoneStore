@@ -13,6 +13,7 @@
                         <h2 class="card-title">{{ $phone->name }}</h2>
                         <p class="card-text"><strong>Category:</strong> {{ $phone->category->name }}</p>
                         <p class="card-text"><strong>Quantity:</strong> {{ $phone->quantity }}</p>
+                        <h3 class="card-title">${{ $phone->price }}</h3>
                         <p class="card-text">
                             <small class="text-muted">Created at: {{ $phone->created_at->format('d M, Y') }}</small>
                         </p>

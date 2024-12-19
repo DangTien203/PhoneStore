@@ -9,7 +9,7 @@ class Phone extends Model
 {
     use HasFactory;
     protected  $table = 'phones';
-    protected  $fillable = ['id', 'name', 'image_path', 'category_id', 'quantity'];
+    protected  $fillable = ['id', 'name', 'price', 'image_path', 'category_id', 'quantity'];
 
     // Relationship to Category
     public function category()
