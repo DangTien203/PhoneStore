@@ -126,7 +126,7 @@
         <div class="container text-center">
             <h2>Ready to Find Your Perfect Phone?</h2>
             <p>Browse our collection now and discover amazing deals on the latest smartphones.</p>
-            <a href="{{ url('/phones') }}" class="btn btn-light btn-lg mt-3">Start Shopping</a>
+            <a href="{{ url('/phones/shopping') }}" class="btn btn-light btn-lg mt-3">Start Shopping</a>
         </div>
     </section>
 @endsection

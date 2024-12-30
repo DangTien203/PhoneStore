@@ -20,7 +20,7 @@
             <select name="phone_id" class="form-control">
                 @foreach ($phones as $phone)
                     <option value="{{ $phone->id }}" {{ $phone->id == $order->phone_id ? 'selected' : '' }}>
-                        {{ $phone->name }} - quantity {{ $phone->quantity }}
+                        {{ $phone->name }} - ${{ $phone->price }}
                     </option>
                 @endforeach
             </select>

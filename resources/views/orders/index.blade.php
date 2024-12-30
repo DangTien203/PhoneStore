@@ -29,7 +29,7 @@
                         <form action="{{ route('orders.destroy', $order->id) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger"  onclick="return confirm('Are you sure you want to delete this order?')">Delete</button>
                         </form>
                     </td>
                 </tr>

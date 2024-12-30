@@ -26,7 +26,7 @@
                             <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-primary">Edit</a>
                             <form action="{{ route('customers.destroy', $customer->id) }}" method="POST" style="display:inline-block;">
                                 @csrf @method('DELETE')
-                                <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this category?')">Delete</button>
+                                <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this customer?')">Delete</button>
                             </form>
                         </td>
                     </tr>
